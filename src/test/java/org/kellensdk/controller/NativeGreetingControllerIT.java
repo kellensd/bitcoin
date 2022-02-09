@@ -1,9 +1,9 @@
-package org.kellensdk;
+package org.kellensdk.controller;
 
 import io.quarkus.test.junit.NativeImageTest;
 
 @NativeImageTest
-public class NativeGreetingResourceIT extends GreetingResourceTest {
+public class NativeGreetingControllerIT extends GreetingControllerTest {
 
     // Execute the same tests but in native mode.
 }
