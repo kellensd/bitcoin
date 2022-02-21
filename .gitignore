@@ -39,4 +39,4 @@ nb-configuration.xml
 .env
 
 #docker
-src/main/docker/mysql/*.*
+src/main/docker/mysql/**
