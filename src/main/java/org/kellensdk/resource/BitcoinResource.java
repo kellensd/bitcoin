@@ -1,4 +1,4 @@
-package org.kellensdk.controller;
+package org.kellensdk.resource;
 
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 import org.kellensdk.model.Bitcoin;
@@ -13,7 +13,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 @Path("/bitcoins")
-public class BitcoinController {
+public class BitcoinResource {
 
     @Inject
     @RestClient

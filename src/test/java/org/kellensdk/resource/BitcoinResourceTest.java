@@ -1,11 +1,11 @@
-package org.kellensdk.controller;
+package org.kellensdk.resource;
 
 import io.quarkus.test.junit.QuarkusTest;
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.Test;
 
 @QuarkusTest
-class BitcoinControllerTest {
+class BitcoinResourceTest {
 
     @Test
     public void shouldReturnHttpCode200WhenRequestedTest(){
