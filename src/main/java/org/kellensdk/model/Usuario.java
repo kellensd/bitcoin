@@ -22,4 +22,6 @@ public class Usuario extends PanacheEntityBase {
     private String username;
     @Setter
     private String password;
+    @Setter
+    private String role;
 }
