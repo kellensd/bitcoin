@@ -1,5 +1,6 @@
 package org.kellensdk.model;
 
+import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.Column;
@@ -15,14 +16,20 @@ public class Ordem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Setter
     private Double preco;
+
     @Setter
     private String tipo;
+
     @Setter
     private LocalDate data;
+
     @Setter
     private String status;
+
+    @Getter
     @Setter
     @Column(name = "user_id")
     private Long userId;
