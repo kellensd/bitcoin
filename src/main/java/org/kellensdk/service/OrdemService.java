@@ -9,6 +9,7 @@ import javax.inject.Inject;
 import javax.ws.rs.NotFoundException;
 import javax.ws.rs.core.SecurityContext;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Optional;
 
 @ApplicationScoped
@@ -27,5 +28,9 @@ public class OrdemService {
         ordem.setData(LocalDate.now());
         ordem.setStatus("ENVIADA");
         ordemRepository.persist(ordem);
+    }
+
+    public List<Ordem> listAllOrdens() {
+        return ordemRepository.listAll();
     }
 }
