@@ -1,9 +1,11 @@
 package org.kellensdk.resource;
 
 import org.kellensdk.model.Usuario;
+import org.kellensdk.service.UsuarioService;
 
 import javax.annotation.security.PermitAll;
 import javax.annotation.security.RolesAllowed;
+import javax.inject.Inject;
 import javax.transaction.Transactional;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -16,18 +18,21 @@ import java.util.List;
 @Path("/usuarios")
 public class UsuarioResource {
 
+    @Inject
+    UsuarioService usuarioService;
+
     @POST
     @PermitAll
     @Transactional
     @Consumes(MediaType.APPLICATION_JSON)
     public void create(Usuario usuario) {
-        Usuario.create(usuario);
+        usuarioService.create(usuario);
     }
 
     @GET
     @RolesAllowed("admin")
     @Produces(MediaType.APPLICATION_JSON)
     public List<Usuario> listAllUsers() {
-        return Usuario.listAll();
+        return usuarioService.listAllUsers();
     }
 }
