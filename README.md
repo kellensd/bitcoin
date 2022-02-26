@@ -4,12 +4,9 @@ This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
 If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
 
-## To Create the database
-1 - create folder mysql in: src/main/docker/mysql
-
-2 - in src/main/docker run command docker-compose up
-
-3 - in docker desktop run script.sql in mysql cli, or open dbeaver to create database e run create tables of script.
+## To Create image docker of application and the database
+- in C:\workspace\bitcoin run mvn clean install -DskipTests
+- in C:\workspace\bitcoin run command docker-compose up
 
 ## Running the application in dev mode
 
